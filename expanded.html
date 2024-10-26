@@ -1,0 +1,196 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/favicon/favicon.ico">
+
+    <title>ArtChef || Expanded</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./assets/css/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap-better-nav.css" />
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="./assets/font-awesome-pro/assets/css/all.min.css" />
+
+    <!-- swiper slider -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- For RTL -->
+    <!-- <link rel="stylesheet" href="./assets/css/style-rtl.css" /> -->
+
+    <!-- Jquery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/logo.png" alt="Artchef Logo" class="d-inline-block align-text-top"
+                        style="max-width: 150px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <div class="d-flex flex-grow-1 justify-content-center menu-holder"></div>
+                    <div class="d-flex button-holder">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-user"></i>
+                            <span class="button-text">البيان ليلان</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="video-section py-5 py-sd-3">
+        <div class="container">
+            <h2 class="mb-4">كؤوس باتيفور بلجيكي للمناسبات</h2>
+            <div class="row">
+                <div class="col-lg-8 col-md-12 video-player">
+                    <div class="player-wrapper">
+                        <div class="video-placeholder">
+                            <!-- Your video player iframe or element here -->
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 playlist">
+                    <!-- Playlist Accordion -->
+                    <div class="accordion" id="videoAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button custom-accordion-btn" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  كل الفيديوهات
+                                  <span class="accordion-arrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                  </span>
+                                </button>
+                              </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#videoAccordion">
+                                <div class="accordion-body">
+                                    <ul class="playlist-list">
+                                        <li class="active">
+                                            <input type="checkbox" checked>
+                                            <span>1.</span> مرحبا بكم | 10:20
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <span>2.</span> اساسيات الحلو البلجيكي | 21:20
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <span>3.</span> كاس اول شوكولاطه موس | 10:20
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <span>4.</span> كاس تاني قهوه البلجيكيه | 10:20
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <span>5.</span> كاس تالت الحلو البلجيكي | 10:20
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <span>6.</span> الحلو البلجيكي | 10:20
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Playlist Accordion -->
+                </div>
+            </div>
+
+            <div class="row mt-5 video-info">
+                <div class="col-12">
+                    <h4>درس 1: معلومات اضافيه</h4>
+                    <p>أهلاً بكم في مدرسة آرتشيف لفنون الحلويات...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-section py-5 py-sd-3">
+        <div class="container">
+            <div class="row align-items-center flex-column">
+                <!-- Logo and Description -->
+                <div class="col-lg-12 col-md-12 d-flex justify-content-between footer-first mb-3">
+                    <div class="footer-text-container">
+                        <h1 class="mb-4">
+                            ترغبون في الحصول على تحديثات؟ <span class="highlight-text">انضموا إلينا!</span>
+                        </h1>
+                        <p class="my-5 mt-sd-2">انضموا إلى نادي الخبازين في آرتشيف واطلعوا على كل الصيحات والنصائح في
+                            عالم
+                            الحلويات والخبر لتحسين مهاراتكم.</p>
+
+                        <form class="subscription-form mt-4 mt-sd-2">
+                            <input type="email" class="form-control" placeholder="بريد">
+                            <button type="submit" class="btn btn-primary">سجلني</button>
+                        </form>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="./assets/images/footer-logo.png" alt="ArtChef Logo" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between footer-second mt-3 pt-4">
+                    <div class="col-lg-6 col-md-12 d-flex">
+                        <ul class="footer-links">
+                            <li><a href="#">بيت</a></li>
+                            <li><a href="#">من نحن</a></li>
+                            <li><a href="#">مقالات</a></li>
+                            <li><a href="#">تواصل معنا</a></li>
+                        </ul>
+                        <ul class="footer-links me-5">
+                            <li><a href="#">نوع ورشات</a></li>
+                            <li><a href="#">نوع ورشات</a></li>
+                            <li><a href="#">نوع ورشات</a></li>
+                            <li><a href="#">نوع ورشات</a></li>
+                        </ul>
+                        <ul class="footer-links me-5">
+                            <li><a href="#">قوانين الاستعمال</a></li>
+                            <li><a href="#">معلومات عامة</a></li>
+                        </ul>
+                    </div>
+                    <div class="follow-us text-start">
+                        <p class="follow-text">تابعنا اونلاين</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center mt-4">
+                    <p class="footer-copyright">All rights Reserved &copy; artchef.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="./assets/font-awesome-pro/assets/js/pro.min.js"></script>
+    <script src="./assets/js/bootstrap-better-nav.js"></script>
+    <script src="./assets/js/Bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+</body>
+
+</html>
