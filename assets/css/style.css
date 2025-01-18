@@ -784,6 +784,14 @@ img {
 
 
 @media (max-width: 768px) {
+    :root {
+        --font-size-body: 1rem;
+        --font-size-small: 0.75rem;
+        --font-size-heading: 1.3rem;
+        --font-size-subheading: 1rem;
+        --gutter: 1rem;
+    }
+
     .custom-header .menu-icon {
         width: 75px;
     }
@@ -806,8 +814,9 @@ img {
     }
 
     .about-section {
-        margin-top: -25px;
+        margin-top: -10px;
         position: relative;
+        padding-top: 20px;
     }
 
     .about-section .col-md-6:last-child {
@@ -865,9 +874,10 @@ img {
     }
 
     .single.contact-section {
-        margin-top: -23px;
+        margin-top: -10px;
         position: relative;
         background: #fff;
+        padding-top: 45px !important;
     }
 
     .single.contact-section {
@@ -889,9 +899,10 @@ img {
     }
 
     .file-section {
-        margin-top: -21px;
+        margin-top: -2px;
         background: #fff;
         position: relative;
+        padding-top: 30px;
     }
 
     .filter-btn {
@@ -899,7 +910,7 @@ img {
     }
 
     .file-grid {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .social-card,
@@ -908,8 +919,42 @@ img {
     }
 
     .social-media-section {
-        margin-top: -22px;
+        margin-top: -7px;
         position: relative;
         background: #fff;
+        padding-top: 45px;
+    }
+
+    .curve {
+        bottom: -35px;
+    }
+
+    .contact-card {
+        margin: 0;
+        padding: 20px 0;
+        min-height: 177px;
+    }
+
+    .contact-card .icon {
+        margin-bottom: 20px !important;
+    }
+
+    .contact-card .icon img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .custom-footer {
+        padding-top: 50px;
+    }
+
+    .file-image,
+    .file-placeholder {
+        height: 290px;
+        min-height: 290px;
     }
 }
