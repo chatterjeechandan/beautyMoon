@@ -1,21 +1,21 @@
 @font-face {
-    font-family: 'DejaVuSans';
-    src: url('../fonts/dejavu-sans/DejaVuSans.ttf') format('truetype');
+    font-family: 'expoArabic';
+    src: url('../fonts/expo-arabic/Expo\ Arabic\ Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'DejaVuSansBold';
-    src: url('../fonts/dejavu-sans/DejaVuSans-Bold.ttf') format('truetype');
+    font-family: 'expoArabicBold';
+    src: url('../fonts/expo-arabic/Expo\ Arabic\ Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 /* Global Styles */
 :root {
-    --font-primary: 'DejaVuSans', sans-serif;
-    --font-bold: 'DejaVuSansBold', sans-serif;
+    --font-primary: 'expoArabic', sans-serif;
+    --font-bold: 'expoArabicBold', sans-serif;
     --color-primary: #4c868b;
     --color-secondary: #fff;
     --font-color-primary: #2f6c6f;

@@ -26,6 +26,7 @@
     <!-- Jquery -->
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/masonry.pkgd.min.js"></script>
+    <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -338,6 +339,17 @@
         const sideMenu = document.getElementById("sideMenu");
         sideMenu.classList.toggle("open");
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const grid = document.querySelector('.row[data-masonry]');
+        imagesLoaded(grid, function () {
+            new Masonry(grid, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+                percentPosition: true,
+            });
+        });
+    });
 </script>
 
 </html>
