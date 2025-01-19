@@ -485,7 +485,7 @@ img {
 }
 
 .contact-form-section .form-container h2 {
-    font-size: 1.6rem;
+    font-size: var(--font-size-heading);
     font-weight: bold;
     color: #063735;
     margin-bottom: 1.5rem;
@@ -802,7 +802,7 @@ img {
 
     .custom-header .contact-button .btn-white {
         font-size: 14px;
-        padding: 7px 15px !important;
+        padding: 7px 13px !important;
     }
 
     .breadcrumb {
