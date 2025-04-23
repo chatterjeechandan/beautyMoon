@@ -174,9 +174,9 @@ body {
 }
 
 .hero-banner h1 {
-  font-family: 'Rubik-Bold';
   font-size: 4rem;
   margin-bottom: var(--spacing-md);
+  font-weight: 700;
 }
 
 .category-card {
