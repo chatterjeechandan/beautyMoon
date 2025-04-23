@@ -352,6 +352,7 @@ body {
     background-image: url('../images/banner-mobile.jpg');
     background-position: 0 0;
     min-height: 300px;
+    margin-top: 30px;
   }
 
   .hero-banner h1 {
@@ -360,5 +361,9 @@ body {
 
   .highlight-header h2 {
     font-size: 1.5rem;
+  }
+
+  .product-card {
+    margin-right: 20px;
   }
 }
