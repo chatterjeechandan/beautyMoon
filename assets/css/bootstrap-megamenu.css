@@ -1,0 +1,153 @@
+:root {
+  --sidebar-width: 280px;
+  --sidebar-bg: #fff;
+  --sidebar-text: #333;
+  --sidebar-link-color: #000;
+  --sidebar-hover-bg: #f7f7f7;
+  --sidebar-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+#side-menu {
+  position: fixed;
+  top: 0;
+  right: calc(-1 * var(--sidebar-width));
+  width: var(--sidebar-width);
+  max-width: 90%;
+  height: 100%;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 20px 15px;
+  z-index: 1050;
+  box-shadow: var(--sidebar-shadow);
+  overflow-y: auto;
+  transition: right var(--transition-speed) ease;
+  display: none;
+}
+
+body.side-menu-visible #side-menu {
+  display: block;
+  right: 0;
+}
+
+#side-menu.side-menu-left {
+  right: auto;
+  left: calc(-1 * var(--sidebar-width));
+}
+
+body.side-menu-visible #side-menu.side-menu-left {
+  left: 0;
+}
+
+#side-menu .close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: var(--sidebar-link-color);
+  z-index: 1060;
+}
+
+#side-menu .contents {
+  margin-top: 50px;
+}
+
+#side-menu .nav-link {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sidebar-link-color);
+  text-decoration: none;
+  position: relative;
+  transition: background var(--transition-speed);
+}
+
+#side-menu .nav-link:hover {
+  background-color: var(--sidebar-hover-bg);
+}
+
+#side-menu .nav-link i {
+  position: absolute;
+  top: 16px;
+  left: 0;
+}
+
+#side-menu .nav-item,
+#side-menu ul {
+  width: 100%;
+  padding-right: 0;
+  list-style: none;
+  margin: 0 0 20px 0;
+}
+
+.side-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-bg);
+  z-index: 1040;
+  display: none;
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease;
+}
+
+body.side-menu-visible .side-menu-overlay {
+  display: block;
+  opacity: 1;
+}
+
+/* Submenu */
+#side-menu .submenu-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--sidebar-bg);
+  z-index: 1100;
+  overflow-y: auto;
+  transition: transform var(--transition-speed) ease;
+}
+
+#side-menu .submenu-wrapper.d-none {
+  display: none !important;
+}
+
+#side-menu .submenu-back {
+  cursor: pointer;
+  margin: 30px 0;
+}
+
+/* Mega Menu in Sidebar Context */
+#side-menu .mega-menu {
+  width: 100%;
+  padding: 0 !important;
+  box-shadow: none !important;
+  transform: translate(-15px, 110px) !important;
+}
+
+#side-menu .menu-list {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#side-menu .mega-menu .img-holder {
+  margin-right: -16px;
+  padding-bottom: 30px;
+}
+
+#side-menu .dropdown-toggle::after {
+  display: none;
+}
