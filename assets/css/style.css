@@ -241,6 +241,7 @@ body {
 .product-card {
   cursor: pointer;
   text-align: center;
+  height: 470px !important;
 }
 
 .product-card:hover {
@@ -291,6 +292,204 @@ body {
 .beauty-magazine .swiper-scrollbar {
   background: #fff;
 }
+
+/*About*/
+.about-intro {
+  background-color: #F3F8F9 !important;
+  color: var(--color-text);
+  padding: var(--spacing-xl) 0;
+}
+
+.about-intro h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.about-value {
+  background-color: #ffffff !important;
+}
+
+.about-value h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.about-value p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-offers h3 {
+  font-size: 1.5rem;
+}
+
+.offer-box {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: var(--radius-md);
+  height: 100%;
+}
+
+.offer-box .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-box img {
+  max-height: 32px;
+}
+
+.bg-light-green {
+  background: #E2EC96;
+}
+
+.bg-light-purple {
+  background: #ECDBFF;
+}
+
+.why-us ul li {
+  list-style: disc;
+  padding: 15px 0;
+}
+
+.quote-section img {
+  width: 100%;
+}
+
+.quote-section input {
+  padding: 15px 12px;
+}
+
+.filter-box {
+  border: 1px solid #eee;
+}
+
+.product-card img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.product-card .rating {
+  font-size: 0.85rem;
+}
+
+.product-card .rounded-circle {
+  display: inline-block;
+}
+
+/*Product List*/
+
+.filter-box {
+  border: 1px solid #eee;
+}
+
+
+.product-card img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.product-card .rating {
+  font-size: 0.85rem;
+}
+
+.product-card .rounded-circle {
+  display: inline-block;
+}
+
+.product-card .color-option {
+  min-height: 16px;
+}
+
+.bg-promo {
+  background-color: #f3d2e8;
+}
+
+.promo-banner img {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.bg-promo h2 {
+  font-size: 3rem;
+}
+
+.bg-promo p {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.btn-view-more {
+  background-color: #64c7f6;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view-more:hover {
+  background-color: #3bb2e0;
+  color: #fff;
+}
+
+.accordion-button {
+  font-weight: 600;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.accordion-body {
+  font-size: 14px;
+}
+
+.accordion-button::after {
+  display: none !important;
+}
+
+.icon-toggle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #6DCFF6;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000 !important;
+  box-shadow: none;
+}
+
+.accordion-collapse li {
+  padding: 3px 0;
+}
+
+.accordion-collapse li a {
+  color: #000 !important;
+  text-decoration: none;
+}
+
+.accordion-collapse li.active a,
+.accordion-collapse li a:hover {
+  color: #6DCFF6 !important;
+  text-decoration: none;
+}
+
+.form-check {
+  display: flex;
+}
+
+.form-check label {
+  margin-right: 30px;
+}
+
+
 
 /* Mobile adjustments */
 @media (max-width: 767.98px) {
@@ -356,7 +555,7 @@ body {
   }
 
   .hero-banner h1 {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 
   .highlight-header h2 {
@@ -365,5 +564,43 @@ body {
 
   .product-card {
     margin-right: 20px;
+  }
+
+  .about-intro h2 {
+    font-size: 1.7rem;
+  }
+
+  .about-value h3 {
+    font-size: 1.4rem;
+  }
+
+  .about-value p {
+    line-height: normal;
+  }
+
+  .offer-box {
+    padding: 0;
+  }
+
+  .why-us ul li {
+    padding: 10px 0px 0px 15px;
+  }
+
+  .product-listing .product-card {
+    margin-right: 0;
+    height: 420px !important;
+  }
+
+  .bg-promo,
+  .bg-promo img {
+    border-radius: 0 !important;
+  }
+
+  .bg-promo h2 {
+    font-size: 2rem;
+  }
+
+  .bg-promo p {
+    font-size: 1.2rem;
   }
 }
