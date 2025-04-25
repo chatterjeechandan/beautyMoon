@@ -590,7 +590,6 @@ body {
     background-image: url('../images/banner-mobile.jpg');
     background-position: 0 0;
     min-height: 300px;
-    margin-top: 26px;
   }
 
   .hero-banner h1 {
@@ -641,5 +640,9 @@ body {
 
   .bg-promo p {
     font-size: 1.2rem;
+  }
+
+  header {
+    margin-bottom: 24px;
   }
 }
