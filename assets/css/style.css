@@ -444,6 +444,7 @@ body {
   font-weight: 600;
   justify-content: space-between;
   text-align: right;
+  padding: 5px 0;
 }
 
 .accordion-body {
@@ -489,7 +490,45 @@ body {
   margin-right: 30px;
 }
 
+.thumb-swiper .swiper-button-next {
+  position: static;
+  width: 30px;
+  height: 30px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}
 
+.thumb-img {
+  width: 80px;
+  height: auto;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.thumb-img:hover {
+  transform: scale(1.05);
+}
+
+.thumb-img.selected {
+  border-color: #00bfff;
+}
+
+.mobile-sticky-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 10px 16px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1050;
+}
 
 /* Mobile adjustments */
 @media (max-width: 767.98px) {

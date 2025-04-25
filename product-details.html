@@ -127,11 +127,10 @@
     <section class="product-listing py-3 py-md-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <nav class="mb-2 small text-muted">
-                        <a href="#" class="text-muted text-decoration-none">דף בית</a> &lt; איפור &lt; שם מוצר
-                    </nav>
-
+                <nav class="mb-2 small text-muted">
+                    <a href="#" class="text-muted text-decoration-none">דף בית</a> &lt; איפור &lt; שם מוצר
+                </nav>
+                <div class="col-md-6 mb-md-4 mb-md-0 order-1 order-md-0 mt-3 mt-md-0">
                     <h2 class="fw-bold m-0">LIP LICK פילינג – באלם לשפתיים</h2>
                     <div class="text-muted small">שם חברה של המוצר<br>מק"ט: 0000000000</div>
 
@@ -151,47 +150,46 @@
                         <div class="fw-bold fs-5 mt-2">149₪</div>
                     </div>
 
-                    <div class="d-flex justify-content-start">
+                    <div class="d-flex justify-content-start d-none d-md-block">
                         <button class="btn btn-view-more d-inline-flex align-items-center gap-2">
                             <i class="fa fa-cart-plus"></i> הוספה לסל קניות
                         </button>
+                        <button class="btn p-0 text-muted favourite-btn me-4">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 order-0 order-md-1">
                     <div class="d-flex gap-4 align-items-start">
                         <div>
-                            <img id="mainProductImage" src="assets/images/main-product1.jpg" class="img-fluid rounded" />
+                            <img id="mainProductImage" src="assets/images/main-product1.jpg"
+                                class="img-fluid rounded" />
                         </div>
-                        <div class="swiper thumb-swiper" style="width: 80px; height: 320px;">
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-wrapper flex-column">
-                                <div class="swiper-slide">
+                        <div style="display: flex; align-items: center; flex-direction: column; width: 100px;"
+                            class="d-none d-md-flex">
+                            <button id="thumbUp" style="background: none; border: none;">
+                                <img src="assets/images/icons/up-arrow.png" alt="Up" style="width: 24px;" />
+                            </button>
+                            <div id="thumbContainer" style="height: 300px; overflow: hidden;">
+                                <div id="thumbList"
+                                    style="display: flex; flex-direction: column; transition: transform 0.3s;">
                                     <img src="assets/images/thumb1.jpg" class="img-fluid rounded thumb-img"
                                         data-full="assets/images/main-product1.jpg" />
-                                </div>
-                                <div class="swiper-slide">
                                     <img src="assets/images/thumb2.jpg" class="img-fluid rounded thumb-img"
                                         data-full="assets/images/main-product2.jpg" />
-                                </div>
-                                <div class="swiper-slide">
                                     <img src="assets/images/thumb3.jpg" class="img-fluid rounded thumb-img"
                                         data-full="assets/images/main-product3.jpg" />
-                                </div>
-                                <div class="swiper-slide">
                                     <img src="assets/images/thumb4.jpg" class="img-fluid rounded thumb-img"
                                         data-full="assets/images/main-product4.jpg" />
-                                </div>
-                                <div class="swiper-slide">
                                     <img src="assets/images/thumb5.jpg" class="img-fluid rounded thumb-img"
                                         data-full="assets/images/main-product5.jpg" />
-                                </div>
-                                <div class="swiper-slide">
                                     <img src="assets/images/thumb6.jpg" class="img-fluid rounded thumb-img"
                                         data-full="assets/images/main-product6.jpg" />
                                 </div>
                             </div>
-                           
-                            <div class="swiper-button-prev"></div>
+                            <button id="thumbDown" style="background: none; border: none; margin-top: 10px;">
+                                <img src="assets/images/icons/down-arrow.png" alt="Down" style="width: 24px;" />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -444,6 +442,11 @@
         </div>
     </section>
 
+    <div class="mobile-sticky-btn d-md-none">
+        <button class="btn btn-view-more w-100 rounded-pill d-flex justify-content-center align-items-center gap-2">
+            <i class="fa fa-cart-plus"></i> הוספה לסל קניות
+        </button>
+    </div>
 
     <footer class="site-footer mt-5 pt-5 pb-3 position-relative border-top">
         <div class="container">
@@ -530,22 +533,31 @@
             });
         });
 
-        const thumbSwiper = new Swiper(".thumb-swiper", {
-            direction: "vertical",
-            slidesPerView: 3,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-
         document.querySelectorAll(".thumb-img").forEach((img) => {
             img.addEventListener("click", () => {
                 const fullImg = img.getAttribute("data-full");
                 document.getElementById("mainProductImage").src = fullImg;
             });
         });
+
+        let currentIndex = 0;
+        const thumbnails = document.querySelectorAll(".thumb-img");
+        const visibleCount = 3;
+        const thumbHeight = 77;
+
+        const thumbList = document.getElementById("thumbList");
+
+        function updateSlider(direction) {
+            const maxIndex = thumbnails.length - visibleCount;
+            if (direction === "up" && currentIndex > 0) currentIndex--;
+            if (direction === "down" && currentIndex < maxIndex) currentIndex++;
+
+            thumbList.style.transform = `translateY(-${currentIndex * thumbHeight}px)`;
+        }
+
+        document.getElementById("thumbUp").onclick = () => updateSlider("up");
+        document.getElementById("thumbDown").onclick = () => updateSlider("down");
+
     </script>
 
 </body>
